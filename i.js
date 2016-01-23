@@ -1,4 +1,4 @@
-var speed=25;                         // SPEED OF ANIMATION IN MILLISECONDS.
+var speed=50;                         // SPEED OF ANIMATION IN MILLISECONDS.
 var change=5000;                   // MAX TIME BETWEEN DIRECTION CHANGES IN MILLISECONDS. 
 var xmax=5;                             // MAX NUMBER OF PIXEL STEPS LEFT OR RIGHT.        
 var ymax=3;                             // MAX NUMBER OF PIXEL STEPS UP OR DOWN.
