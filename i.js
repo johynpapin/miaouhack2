@@ -18,7 +18,7 @@ function pwasson(idp) {
   var ydir=true;
   var imagex=new Image(); imagex.src=fishLurl;
   var t=(ns4)? '<layer name="bothfish'+idp+'" top="-100" left="0">' : '<div id="bothfish'+idp+'" style="position:absolute; top:0px; left;0px; width:1px; height:1px">'; 
-  t+='<img src="'+fishRurl+'" border="0" name="fishpic">';
+  t+='<img src="'+fishRurl+'" border="0" name="fishpic"'+idp+'>';
   t+=(ns4)?'</layer>':'</div>';
   document.write(t);
   
@@ -101,5 +101,5 @@ function pwasson(idp) {
   changedirs();
   }
 };
-pwasson();
-pwasson();
+pwasson(1);
+pwasson(2);
