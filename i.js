@@ -1,4 +1,4 @@
-function pwasson() {
+function pwasson(idp) {
   var speed=50;                         // SPEED OF ANIMATION IN MILLISECONDS.
   var change=5000;                   // MAX TIME BETWEEN DIRECTION CHANGES IN MILLISECONDS. 
   var xmax=5;                             // MAX NUMBER OF PIXEL STEPS LEFT OR RIGHT.        
@@ -17,7 +17,7 @@ function pwasson() {
   var xdir=true;
   var ydir=true;
   var imagex=new Image(); imagex.src=fishLurl;
-  var t=(ns4)? '<layer name="bothfish" top="-100" left="0">' : '<div id="bothfish" style="position:absolute; top:0px; left;0px; width:1px; height:1px">'; 
+  var t=(ns4)? '<layer name="bothfish'+idp+'" top="-100" left="0">' : '<div id="bothfish'+idp+'" style="position:absolute; top:0px; left;0px; width:1px; height:1px">'; 
   t+='<img src="'+fishRurl+'" border="0" name="fishpic">';
   t+=(ns4)?'</layer>':'</div>';
   document.write(t);
@@ -61,8 +61,8 @@ function pwasson() {
   }
   
   function checkdirs(){
-  if(xdir) (ns4)? bothfish.document.images["fishpic"].src=fishRurl:document.images["fishpic"].src=fishRurl;
-  else (ns4)? bothfish.document.images["fishpic"].src=fishLurl:document.images["fishpic"].src=fishLurl;
+  if(xdir) (ns4)? bothfish.document.images["fishpic"+id].src=fishRurl:document.images["fishpic"+id].src=fishRurl;
+  else (ns4)? bothfish.document.images["fishpic"+id].src=fishLurl:document.images["fishpic"+id].src=fishLurl;
   }
   
   function animate(){
@@ -87,13 +87,13 @@ function pwasson() {
   }
   
   window.onload=function(){
-  bothfish=getid('bothfish');
+  bothfish=getid('bothfish'+id);
   if(ns4){
-  picw=bothfish.document.images['fishpic'].width;
+  picw=bothfish.document.images['fishpic'+id].width;
   pich=bothfish.document.images['fishpic'].height;
   }else{
-  picw=document.images['fishpic'].width;
-  pich=document.images['fishpic'].height;
+  picw=document.images['fishpic'+id].width;
+  pich=document.images['fishpic'+id].height;
   }
   getwindowsize();
   moveidto(bothfish,(w_x-picw)/2,(w_y-pich)/2);
