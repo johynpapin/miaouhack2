@@ -61,8 +61,8 @@ function pwasson(idp) {
   }
   
   function checkdirs(){
-  if(xdir) (ns4)? bothfish.document.images["fishpic"+id].src=fishRurl:document.images["fishpic"+id].src=fishRurl;
-  else (ns4)? bothfish.document.images["fishpic"+id].src=fishLurl:document.images["fishpic"+id].src=fishLurl;
+  if(xdir) (ns4)? bothfish.document.images["fishpic"+idp].src=fishRurl:document.images["fishpic"+idp].src=fishRurl;
+  else (ns4)? bothfish.document.images["fishpic"+idp].src=fishLurl:document.images["fishpic"+idp].src=fishLurl;
   }
   
   function animate(){
@@ -87,13 +87,13 @@ function pwasson(idp) {
   }
   
   window.onload=function(){
-  bothfish=getid('bothfish'+id);
+  bothfish=getid('bothfish'+idp);
   if(ns4){
-  picw=bothfish.document.images['fishpic'+id].width;
-  pich=bothfish.document.images['fishpic'].height;
+  picw=bothfish.document.images['fishpic'+idp].width;
+  pich=bothfish.document.images['fishpic'+idp].height;
   }else{
-  picw=document.images['fishpic'+id].width;
-  pich=document.images['fishpic'+id].height;
+  picw=document.images['fishpic'+idp].width;
+  pich=document.images['fishpic'+idp].height;
   }
   getwindowsize();
   moveidto(bothfish,(w_x-picw)/2,(w_y-pich)/2);
