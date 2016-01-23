@@ -79,6 +79,7 @@ function pwasson(idp) {
   else if((ty-incry)<yo){ ydir=true; checkdirs(); moveidby(bothfish,0,incry); }else{ moveidby(bothfish,0,-incry); }
   if(xdir) if((tx+incrx+picw)>(w_x+xo)){ xdir=false; checkdirs(); moveidby(bothfish,-incrx,0); }else{ moveidby(bothfish,incrx,0); }
   else if((tx-incrx)<xo){ xdir=true; checkdirs(); moveidby(bothfish,incrx,0); }else{ moveidby(bothfish,-incrx,0); }
+  animate()
   }
   
   window.onresize=function(){
@@ -97,7 +98,7 @@ function pwasson(idp) {
   }
   getwindowsize();
   moveidto(bothfish,(w_x-picw)/2,(w_y-pich)/2);
-  setInterval('animate()',speed);
+  animate();
   changedirs();
   }
 };
