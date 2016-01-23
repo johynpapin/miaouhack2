@@ -89,11 +89,11 @@ function pwasson(idp) {
   window.onload=function(){
   bothfish=getid('bothfish'+idp);
   if(ns4){
-  picw=bothfish.document.images['fishpic'+idp].width;
-  pich=bothfish.document.images['fishpic'+idp].height;
+    picw=bothfish.document.images['fishpic'+idp].width;
+    pich=bothfish.document.images['fishpic'+idp].height;
   }else{
-  picw=document.images['fishpic'+idp].width;
-  pich=document.images['fishpic'+idp].height;
+    picw=document.images['fishpic'+idp].width;
+    pich=document.images['fishpic'+idp].height;
   }
   getwindowsize();
   moveidto(bothfish,(w_x-picw)/2,(w_y-pich)/2);
