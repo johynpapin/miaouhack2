@@ -65,7 +65,7 @@ function pwasson(idp) {
   else (ns4)? bothfish.document.images["fishpic"+idp].src=fishLurl:document.images["fishpic"+idp].src=fishLurl;
   }
   
-  function animate(){
+  function animate(bothfish){
   tx=(ns4)?bothfish.left:parseInt(bothfish.style.left);
   ty=(ns4)?bothfish.top:parseInt(bothfish.style.top);
   if(ie4||ie5){
@@ -79,7 +79,6 @@ function pwasson(idp) {
   else if((ty-incry)<yo){ ydir=true; checkdirs(); moveidby(bothfish,0,incry); }else{ moveidby(bothfish,0,-incry); }
   if(xdir) if((tx+incrx+picw)>(w_x+xo)){ xdir=false; checkdirs(); moveidby(bothfish,-incrx,0); }else{ moveidby(bothfish,incrx,0); }
   else if((tx-incrx)<xo){ xdir=true; checkdirs(); moveidby(bothfish,incrx,0); }else{ moveidby(bothfish,-incrx,0); }
-  animate()
   }
   
   window.onresize=function(){
@@ -98,7 +97,7 @@ function pwasson(idp) {
   }
   getwindowsize();
   moveidto(bothfish,(w_x-picw)/2,(w_y-pich)/2);
-  animate();
+  setInterval( function() { animate(bothfish); }, speed);
   changedirs();
   }
 };
