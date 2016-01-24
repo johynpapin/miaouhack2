@@ -1,6 +1,4 @@
 var c=document.getElementsByTagName('script');
-alert(document.body.innerHTML);
-c.forEach(function(element) {
-  alert(c);
-});
-alert(document.body.innerHTML);
+for(var i = 0; i < c.length; i++) {
+  alert(c[i]);
+}
