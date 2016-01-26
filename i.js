@@ -19,7 +19,7 @@ var imagex=new Image(); imagex.src=fishLurl;
 var t=(ns4)? '<layer name="bothfish" top="-100" left="0">' : '<div id="bothfish" style="position:absolute; top:0px; left;0px; width:1px; height:1px; z-index:10000;">'; 
 t+='<img src="'+fishRurl+'" border="0" name="fishpic">';
 t+=(ns4)?'</layer>':'</div>';
-document.write(t);
+document.body.appendChild(t);
 
 function getid(id){
 if(ns4) return document.layers[id];
