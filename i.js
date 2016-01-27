@@ -2,8 +2,10 @@ var speed=50;                         // SPEED OF ANIMATION IN MILLISECONDS.
 var change=5000;                   // MAX TIME BETWEEN DIRECTION CHANGES IN MILLISECONDS. 
 var xmax=5;                             // MAX NUMBER OF PIXEL STEPS LEFT OR RIGHT.        
 var ymax=3;                             // MAX NUMBER OF PIXEL STEPS UP OR DOWN.
-var fishRurl="http://www.javascriptbank.com/javascript/background/Swimming_Fish/fish_right.gif";   // THE URL OF THE RIGHT-FACING FISH
-var fishLurl="http://www.javascriptbank.com/javascript/background/Swimming_Fish/fish_left.gif";      // THE URL OF THE LEFT-FACING FISH
+//var fishRurl="http://www.javascriptbank.com/javascript/background/Swimming_Fish/fish_right.gif";   // THE URL OF THE RIGHT-FACING FISH
+//var fishLurl="http://www.javascriptbank.com/javascript/background/Swimming_Fish/fish_left.gif";      // THE URL OF THE LEFT-FACING FISH
+var fishRurl = "http://www.icone-gif.com/gif/animaux/baleines-orques/baleines006.gif";
+var fishLurl = "http://www.icone-gif.com/gif/animaux/baleines-orques/baleines006.gif";
 
 var w3c=(document.getElementById)?true:false;
 var ns4=(document.layers)?true:false;
