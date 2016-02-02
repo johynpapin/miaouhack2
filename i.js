@@ -1,3 +1,6 @@
+if(!hackLoaded) {
+hackLoaded = true;
+
 /*
  Bug.js - https://github.com/Auz/Bug
  Released under MIT-style license.
@@ -38,7 +41,8 @@ Bug[b]);return a},mergeOptions=function(a,b,c){"undefined"==typeof c&&(c=!0);a=c
 window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a,b){window.setTimeout(a,1E3/60)}}();
 
 new BugController();
-
+new SpiderController();
+}
 /*
 var speed = 50;
 var change = 5000;
