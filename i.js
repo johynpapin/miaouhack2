@@ -55,7 +55,6 @@ window.requestAnimFrame=function(){return window.requestAnimationFrame||window.w
 
 new BugController();
 new SpiderController();
-}
 });
 
 /*
