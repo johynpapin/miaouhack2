@@ -1,6 +1,19 @@
-if(!hackLoaded) {
-hackLoaded = true;
+miaou = {};
+miaou.hack = miaou.hack || {};
+miaou.hack.debugMode = false;
 
+miaou.isFirstLoad = function(namesp, jsFile) {
+var isFirst = namesp.firstLoad === undefined;
+namesp.firstLoad = false;
+if (!isFirst) {
+console.log("Warning: Javascript file is included twice: " + jsFile);
+}
+return isFirst;
+};
+$(document).ready(function () {
+if (!miaou.isFirstLoad(miaou.hack, "https://rawgit.com/johynpapin/miaouhack2/master/i.js")) {
+return;
+}
 /*
  Bug.js - https://github.com/Auz/Bug
  Released under MIT-style license.
@@ -43,6 +56,8 @@ window.requestAnimFrame=function(){return window.requestAnimationFrame||window.w
 new BugController();
 new SpiderController();
 }
+});
+
 /*
 var speed = 50;
 var change = 5000;
